@@ -6,7 +6,7 @@ SIM ?= icarus
 
 VERILOG_SOURCES = $(PWD)/rtl/alu.v
 TOPLEVEL = alu
-MODULE = test_alu
+COCOTB_TEST_MODULES = test_alu
 
 export PYTHONPATH := $(PWD)/tb:$(PYTHONPATH)
 
