@@ -9,6 +9,8 @@ It shows the shape of a real verification effort in miniature: a reference
 model, directed corner cases, constrained-random stimulus, self-checking, and a
 functional-coverage tally that fails if any opcode was never exercised.
 
+> **Verified:** passes on cocotb 2.x with Icarus Verilog (`make`): 2 tests, 0 failures.
+
 ## Layout
 
 ```
