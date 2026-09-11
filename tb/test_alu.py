@@ -29,7 +29,7 @@ async def apply(dut, a, b, op):
     dut.a.value = a
     dut.b.value = b
     dut.op.value = op
-    await Timer(1, units="ns")
+    await Timer(1, unit="ns")
 
 
 @cocotb.test()
@@ -42,7 +42,7 @@ async def test_directed(dut):
     for a, b, op in cases:
         await apply(dut, a, b, op)
         exp = OPS[op](a, b)
-        got = dut.y.value.integer
+        got = int(dut.y.value)
         assert got == exp, \
             f"op={op} a={a:#x} b={b:#x} got={got:#x} exp={exp:#x}"
 
@@ -57,7 +57,7 @@ async def test_random(dut):
         op = random.randint(0, 7)
         await apply(dut, a, b, op)
         exp = OPS[op](a, b)
-        got = dut.y.value.integer
+        got = int(dut.y.value)
         assert got == exp, \
             f"op={op} a={a:#x} b={b:#x} got={got:#x} exp={exp:#x}"
         cov[op] += 1
