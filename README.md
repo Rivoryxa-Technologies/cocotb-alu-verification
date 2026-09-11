@@ -38,6 +38,6 @@ reproduce.
 
 ## What Rivoryxa delivers with this
 
-This is our public reference flow for Python-based verification. For clients we build cocotb testbenches and Python regression automation around real cores: directed tests that reach specific RTL states with hit counts pulled from the VCD, regression drivers with watchdogs and machine-readable results, and RISC-V compliance runs (ACT4) of up to two thousand self-checking programs per core. The same Python discipline produced our approved fix to the riscv-dv CSR test generator ([chipsalliance/riscv-dv#1035](https://github.com/chipsalliance/riscv-dv/pull/1035)).
+This is our public reference flow for Python-based verification. For clients we build cocotb testbenches and Python regression automation around real cores: directed tests that reach specific RTL states with hit counts pulled from the VCD, regression drivers with watchdogs and machine readable results, and RISC-V compliance runs (ACT4) of thousands of self checking programs per core.
 
 See the [Rivoryxa profile](https://github.com/Rivoryxa-Technologies) for our full service list, or reach us on [LinkedIn](https://www.linkedin.com/company/rivoryxa-technologies/).
