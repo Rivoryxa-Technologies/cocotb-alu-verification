@@ -1,0 +1,29 @@
+rm -f /tmp/rivoryxa-alu-clean.xml
+mkdir -p /tmp/rivoryxa-alu-clean
+/opt/homebrew/bin/iverilog -o /tmp/rivoryxa-alu-clean/sim.vvp -s alu -g2012 -f /tmp/rivoryxa-alu-clean/cmds.f  /Users/avishas/developer/rivoryxa-audit/cocotb-alu-verification/rtl/alu.v
+rm -f /tmp/rivoryxa-alu-clean.xml
+COCOTB_TEST_MODULES=test_alu COCOTB_TESTCASE=  COCOTB_TOPLEVEL=alu TOPLEVEL_LANG=verilog       \
+		 /opt/homebrew/bin/vvp -m /Users/avishas/developer/rivoryxa-audit/.venv/lib/python3.12/site-packages/cocotb/libs/libcocotbvpi_icarus.so   /tmp/rivoryxa-alu-clean/sim.vvp   
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:242  in gpi_load_users                  Loaded entry library: '/Users/avishas/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/libpython3.12.dylib'
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:234  in gpi_load_users                  Running entry func 'initialize' from loaded library '/Users/avishas/developer/rivoryxa-audit/.venv/lib/python3.12/site-packages/cocotb/simulator.cpython-312-darwin.so'
+     -.--ns INFO     pygpi                              ..ib/pygpi/embed.cpp:115  in initialize                      Using Python 3.12.10 interpreter at /Users/avishas/developer/rivoryxa-audit/.venv/bin/python
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:74   in gpi_print_registered_impl       GPI: VPI support registered
+     0.00ns INFO     cocotb.initialize                  Seeding Python random module with 1789414058
+     0.00ns INFO     cocotb.initialize                  Initialized cocotb v2.1.0 from /Users/avishas/developer/rivoryxa-audit/.venv/lib/python3.12/site-packages/cocotb
+     0.00ns INFO     cocotb.initialize                  Running on Icarus Verilog version 13.0 (stable)
+     0.00ns INFO     cocotb.regression                  Running tests
+     0.00ns INFO     cocotb.regression                  running test_alu.test_directed (1/2)
+                                                            Directed corner cases.
+     6.00ns INFO     cocotb.regression                  test_alu.test_directed passed
+     6.00ns INFO     cocotb.regression                  running test_alu.test_random (2/2)
+                                                            Constrained-random stimulus with a simple functional-coverage tally.
+  2006.00ns INFO     cocotb.alu                         Functional coverage (ops exercised): {0: 243, 1: 260, 2: 250, 3: 242, 4: 259, 5: 233, 6: 241, 7: 272}
+  2006.00ns INFO     cocotb.regression                  test_alu.test_random passed
+  2006.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** test_alu.test_directed         PASS           6.00           0.00       9212.46  **
+                                                        ** test_alu.test_random           PASS        2000.00           0.03      65459.22  **
+                                                        **************************************************************************************
+                                                        ** TESTS=2 PASS=2 FAIL=0 SKIP=0               2006.00           0.03      62839.31  **
+                                                        **************************************************************************************

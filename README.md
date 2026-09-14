@@ -56,3 +56,5 @@ Suite Icarus 14 build with Icarus 13 caused a runtime-format error in this audit
 the OSS wrapper also conflicted with the virtualenv's Python runtime. Neither
 is an RTL failure. The eight operation counts are not exhaustive cross coverage
 or proof over all operand combinations.
+
+The raw output is in `evidence/audit-2026-09-15.log`.
