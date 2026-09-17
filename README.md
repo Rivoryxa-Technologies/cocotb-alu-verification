@@ -41,3 +41,16 @@ reproduce.
 This is our public reference flow for Python based verification. For clients we build cocotb testbenches and Python regression automation around real cores: directed tests that reach specific RTL states with hit counts pulled from the VCD, regression drivers with watchdogs and machine readable results, and RISC-V compliance runs (ACT4) of thousands of self checking programs per core.
 
 See the [Rivoryxa profile](https://github.com/Rivoryxa-Technologies) for our full service list, or reach us on [LinkedIn](https://www.linkedin.com/company/rivoryxa-technologies/).
+
+---
+
+## More from Rivoryxa
+
+This repository is one public example. The method it demonstrates is applied to
+real OpenHW CORE-V issues in
+[core-v-investigation-reports](https://github.com/Rivoryxa-Technologies/core-v-investigation-reports):
+sixteen public GitHub issues taken to a disposition, each with its evidence,
+proof scope and limits written down.
+
+All examples are listed on the
+[Rivoryxa Technologies profile](https://github.com/Rivoryxa-Technologies).
